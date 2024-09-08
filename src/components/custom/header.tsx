@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Bell, Pizza, ShoppingBag, UserRound } from 'lucide-react';
+import { Bell, Menu, Pizza, ShoppingBag, UserRound } from 'lucide-react';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ export default function Header() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <div className="flex-shrink-0">
+                    <div className="flex-shrink-0 text-black">
                         <Link href="/" className='flex flex-row gap-1'>
                             <Pizza />
                             <span>Milan Pizza</span>
@@ -52,20 +52,7 @@ export default function Header() {
                             className="text-gray-800 hover:text-gray-600 focus:outline-none"
                         >
                             {/* Hamburger Icon */}
-                            <svg
-                                className="h-6 w-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-8 6h8'}
-                                />
-                            </svg>
+                            <Menu />
                         </button>
 
                     </div>

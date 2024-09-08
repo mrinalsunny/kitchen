@@ -1,40 +1,57 @@
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-import Image from "next/image"
+// components/Hero.tsx
+'use client';
 
-export default function Hero() {
-  return (
-    <div className="container mx-auto items-center justify-center border flex">
-      <Carousel className="w-full max-w-xs">
-        <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index}>
-              <div className="p-1">
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
+import React from 'react';
+import Slider from 'react-slick';
+import Image from 'next/image'; // Optional: for optimized images
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+const Hero: React.FC = () => {
+    const settings = {
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 1000,
+      autoplaySpeed: 5000,
+      cssEase: "linear"
+    };
+
+    return (
+        <div className="container mx-auto pb-8">
+            <Slider {...settings} className="carousel">
+                <div className="relative">
                     <Image
-                      src="/caro1.jpg"
-                      alt="Picture of the author"
-                      width={500}
-                      height={500}
+                        src="/images/caro1.jpg"
+                        alt="Slide 1"
+                        layout="responsive"
+                        width={1200}
+                        height={500}
+                        className="object-cover"
                     />
-                    <br />
-                    <p className="text-4xl font-semibold">{index + 1}</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
-  )
-}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
+                        <h2 className="text-3xl font-bold">Welcome to Milan Pizza</h2>
+                    </div>
+                </div>
+                <div className="relative">
+                    <Image
+                        src="/images/caro2.jpg"
+                        alt="Slide 2"
+                        layout="responsive"
+                        width={1200}
+                        height={500}
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
+                        <h2 className="text-3xl font-bold">Delicious Pizzas and More</h2>
+                    </div>
+                </div>
+                {/* Add more slides as needed */}
+            </Slider>
+        </div>
+    );
+};
+
+export default Hero;
