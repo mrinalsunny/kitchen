@@ -14,8 +14,8 @@ const Hero: React.FC = () => {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 1000,
-      autoplaySpeed: 5000,
+      speed: 250,
+      autoplaySpeed: 2500,
       cssEase: "linear"
     };
 
