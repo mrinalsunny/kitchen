@@ -12,14 +12,14 @@ export default function Header() {
     };
 
     return (
-        <nav className="bg-white shadow-md">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="backdrop-blur-sm bg-primary/95 sticky top-0 z-50">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-2">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0 text-black">
                         <Link href="/" className='flex flex-row gap-1'>
                             <Pizza />
-                            <span>Milan Pizza</span>
+                            <span className='font-extrabold'>Milan Pizza</span>
                         </Link>
                     </div>
 
@@ -47,6 +47,9 @@ export default function Header() {
                         <Link href="/" className="text-gray-800 hover:text-gray-600">
                             <Bell />
                         </Link>
+                        <Link href="/services" className="block text-gray-800 hover:text-gray-600">
+                            <ShoppingBag />
+                        </Link>
                         <button
                             onClick={toggleMenu}
                             className="text-gray-800 hover:text-gray-600 focus:outline-none"
@@ -70,9 +73,6 @@ export default function Header() {
                             </Link>
                             <Link href="/contact" className="block text-gray-800 hover:text-gray-600">
                                 Contact
-                            </Link>
-                            <Link href="/services" className="block text-gray-800 hover:text-gray-600">
-                                Cart
                             </Link>
                             <Link href="/services" className="block text-gray-800 hover:text-gray-600">
                                 Profile

@@ -26,7 +26,6 @@ const Hero: React.FC = () => {
                     <Image
                         src="/images/caro1.jpg"
                         alt="Slide 1"
-                        layout="responsive"
                         width={1200}
                         height={500}
                         className="object-cover"
@@ -39,7 +38,42 @@ const Hero: React.FC = () => {
                     <Image
                         src="/images/caro2.jpg"
                         alt="Slide 2"
-                        layout="responsive"
+                        width={1200}
+                        height={500}
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
+                        <h2 className="text-3xl font-bold">Delicious Pizzas and More</h2>
+                    </div>
+                </div>
+                <div className="relative">
+                    <Image
+                        src="/images/caro3.jpg"
+                        alt="Slide 3"
+                        width={1200}
+                        height={500}
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
+                        <h2 className="text-3xl font-bold">Delicious Pizzas and More</h2>
+                    </div>
+                </div>
+                <div className="relative">
+                    <Image
+                        src="/images/caro4.jpg"
+                        alt="Slide 4"
+                        width={1200}
+                        height={500}
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
+                        <h2 className="text-3xl font-bold">Delicious Pizzas and More</h2>
+                    </div>
+                </div>
+                <div className="relative">
+                    <Image
+                        src="/images/caro5.jpg"
+                        alt="Slide 5"
                         width={1200}
                         height={500}
                         className="object-cover"
