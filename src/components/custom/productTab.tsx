@@ -66,7 +66,7 @@ export default async function ProductTab() {
                                             <Image src={product.imageUrl} alt={product.name} width={400} height={400} className='pb-3'/>
                                             {/* <li> */}
                                             <div className='flex items-center justify-between'>
-                                                <div className='font-normal'>${product.price.toFixed(2)}</div>
+                                                <div className='font-normal'>&#8377; {product.price.toFixed(2)}</div>
                                                 <CartButton />
                                             </div>
                                             {/* </li> */}
